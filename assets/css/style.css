@@ -1,0 +1,62 @@
+html, body{
+    height: 100vh;
+    margin: 0;
+}
+
+body{
+    background-image: url('../img/doctor.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+h1{
+    margin-top: 0;
+    padding-top: 4rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    color: #337396;
+    text-transform: uppercase;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.titleList{
+    margin-bottom: 3rem;
+}
+
+.homeLink > a{
+    display: block;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 15rem;
+    height: 8vh;
+    background-color: #337396;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    padding: 2.5rem;
+    line-height: 8vh;
+}
+
+table{
+    table-layout: auto;
+    border-collapse: collapse;
+    margin: auto;
+    background-color: white;
+}
+
+th{
+    border-bottom: 2px solid #337396;
+}
+
+td, th{
+    padding: 0.8rem 1.8rem;
+    text-align: center;
+}

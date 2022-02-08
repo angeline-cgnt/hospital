@@ -1,34 +1,37 @@
-html, body{
+html,
+body {
     height: 100vh;
     margin: 0;
 }
 
-body{
+body {
     background-image: url('../img/doctor.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
-h1{
+h1 {
     margin-top: 0;
-    padding-top: 4rem;
+    padding-top: 3rem;
     text-align: center;
     margin-bottom: 5rem;
     color: #337396;
     text-transform: uppercase;
 }
 
-h2{
+h2 {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    color: #337396;
+    margin-top: 0;
 }
 
-.titleList{
+.titleList {
     margin-bottom: 3rem;
 }
 
-.homeLink > a{
+.homeLink>a {
     display: block;
     margin: auto;
     text-align: center;
@@ -38,25 +41,152 @@ h2{
     font-weight: bold;
     width: 15rem;
     height: 8vh;
-    background-color: #337396;
-    border-radius: 8px;
     margin-bottom: 2rem;
     padding: 2.5rem;
     line-height: 8vh;
+    background: rgba(51, 115, 150, 0.8);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-table{
+.scroll{
+    height: 50vh;
+    overflow: auto;
+    margin: auto;
+    padding: 0rem 3rem;
+}
+
+table {
     table-layout: auto;
     border-collapse: collapse;
     margin: auto;
-    background-color: white;
+    color: #002f59;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 100%;
 }
 
-th{
-    border-bottom: 2px solid #337396;
+thead {
+    background-color: #337396;
+    color: white;
 }
 
-td, th{
-    padding: 0.8rem 1.8rem;
+td,
+th {
+    padding: 0.8rem 2rem;
     text-align: center;
+}
+
+.listAdd {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.listAdd>a {
+    display: inline-block;
+    height: 4vh;
+    line-height: 4vh;
+    width: auto;
+    padding: 0.5rem 1.3rem;
+    margin: 0rem 1rem;
+    color: white;
+    text-decoration: none;
+    background: rgba(51, 115, 150, 0.8);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+form {
+    text-align: center;
+}
+
+form>div>label {
+    display: block;
+    margin: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.1rem;
+    width: 20vw;
+    color: #337396;
+}
+
+form>div>input {
+    width: 20vw;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border: 0.1rem solid #337396;
+    border-radius: 8px;
+}
+
+form>div>input:focus{
+    outline: 0.2rem solid #337396;
+}
+
+form>div>span{
+    position: absolute;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    color: #337396;
+}
+
+form>input {
+    height: 5vh;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1rem;
+    padding: 0.5rem 1.3rem;
+    color: white;
+    background: rgba(51, 115, 150, 0.8);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    cursor: pointer;
+}
+
+.linkProfile, .linkDelete{
+    text-decoration: none;
+    color: #337396;
+}
+
+.patientAdded{
+    text-align: center;
+    color: #337396;
+    font-size: 1.2rem;
+}
+
+.detailsProfile{
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #002f59;
+}
+
+.detailsProfile > a{
+    display: block;
+    text-decoration: none;
+    margin-top: 2rem;
+    color: #337396;
+}
+
+.fa-trash-alt{
+    color: #c06354;
+}
+
+button{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1.3rem;
+    color: white;
+    background: #c06354cc;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    cursor: pointer;
 }

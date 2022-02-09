@@ -1,8 +1,8 @@
 <?php
 require_once '../models/patient.php';
 
-if(isset($_GET['id'])){
-    $id=$_GET['id'];
+if(isset($_POST['profile'])){
+    $id=$_POST['profile'];
     $profileObj = new Patient;
     $arrayprofil = $profileObj->displayProfilePatient($id);
 }

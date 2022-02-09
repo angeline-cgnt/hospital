@@ -31,6 +31,11 @@ h2 {
     margin-bottom: 3rem;
 }
 
+.titleList > a{
+    text-decoration: none;
+    color: #337396;
+}
+
 .homeLink>a {
     display: block;
     margin: auto;
@@ -56,7 +61,7 @@ h2 {
     height: 50vh;
     overflow: auto;
     margin: auto;
-    padding: 0rem 3rem;
+    padding: 0rem 4rem;
 }
 
 table {
@@ -87,7 +92,7 @@ th {
     margin-top: 1rem;
 }
 
-.listAdd>a {
+.linkNav {
     display: inline-block;
     height: 4vh;
     line-height: 4vh;
@@ -97,6 +102,23 @@ th {
     color: white;
     text-decoration: none;
     background: rgba(51, 115, 150, 0.8);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.cancel{
+    height: 4vh;
+    line-height: 4vh;
+    font-size: 0.8rem;
+    width: auto;
+    padding: 0.5rem 1.3rem;
+    margin: 0rem 1rem;
+    color: white;
+    text-decoration: none;
+    background: #c06354cc;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
@@ -117,12 +139,20 @@ form>div>label {
     color: #337396;
 }
 
-form>div>input {
+form>div>input, select, textarea {
     width: 20vw;
     padding: 0.5rem;
     background: rgba(255, 255, 255, 0.8);
     border: 0.1rem solid #337396;
     border-radius: 8px;
+}
+
+option{
+    background: rgba(255, 255, 255, 0.8);
+}
+
+form>div>select>option:active{
+    background-color: #337396;
 }
 
 form>div>input:focus{
@@ -137,8 +167,8 @@ form>div>span{
 }
 
 form>input {
-    height: 5vh;
     font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
     margin-top: 1rem;
     padding: 0.5rem 1.3rem;
     color: white;
@@ -189,4 +219,14 @@ button{
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     cursor: pointer;
+}
+
+.buttonInfos{
+    padding: 0;
+}
+
+.infos{
+    background-color: transparent;
+    color: #002f59;
+    margin: 0;
 }

@@ -13,7 +13,7 @@ if(isset($_POST['edit'])){
 
 if(!empty($_POST['submit'])){    
     if(empty($arrayError)){
-        $id=$_POST['test'];
+        $id=$_POST['id'];
         $lastname=htmlspecialchars(mb_strtoupper(trim($_POST['lastname'])));
         $firstname=htmlspecialchars(ucwords(trim($_POST['firstname'])));
         $birthdate=$_POST['birthdate'];

@@ -44,7 +44,7 @@ class Patient extends Connection{
 
     public function displayPatients():array {
         $base=$this->connectDB();
-        $sql="SELECT `id`, `lastname`, `firstname`, DATE_FORMAT(`birthdate`, '%d/%m/%Y') AS birthdate, `phone`, `mail` FROM `patients`";
+        $sql="SELECT `id`, `lastname`, `firstname`, DATE_FORMAT(`birthdate`, '%d/%m/%Y') AS birthdate, `phone`, `mail` FROM `patients` ORDER BY `lastname`";
         $resultQuery=$base->query($sql);
         return $resultQuery->fetchAll();
     }

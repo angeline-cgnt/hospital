@@ -17,8 +17,8 @@
     <h1>CHU La Manu</h1>
 
     <div class="homeLink">
-    <a href="">
-        Ajouter un RDV
+    <a href="list-appoint.php">
+        Gestion des RDV
     </a>
     <a href="liste-patients.php">
         Liste des patients

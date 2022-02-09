@@ -1,5 +1,5 @@
 <?php
-require_once '../controllers/ajout-patient_controller.php';
+require_once '../controllers/add-patient_controller.php';
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ require_once '../controllers/ajout-patient_controller.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste des patients</title>
+    <title>Nouveau patient</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,11 +17,14 @@ require_once '../controllers/ajout-patient_controller.php';
 </head>
 
 <body>
-    <h1 class="titleList">CHU La Manu</h1>
+    <h1 class="titleList"><a href="home.php">CHU La Manu</a></h1>
     <h2>Nouveau patient</h2>
 
     <?php if (!empty($_POST['submit']) && empty($arrayError)) { ?>
         <p class="patientAdded">Le patient a été ajouté</p>
+        <div class="listAdd">
+            <a class="linkNav" href="liste-patients.php">Liste patients</a>
+        </div>
     <?php } else { ?>
         <form action="" method="POST">
             <div>
@@ -37,6 +40,7 @@ require_once '../controllers/ajout-patient_controller.php';
             <div>
                 <label for="birthdate">Date de naissance: </label>
                 <input type="date" name="birthdate" id="birthdate" value="<?= $_POST['birthdate'] ?? '' ?>" require>
+                <span><?= $arrayError['birthdate'] ?? '' ?></span>
             </div>
             <div>
                 <label for="phone">Téléphone: </label>
@@ -51,12 +55,12 @@ require_once '../controllers/ajout-patient_controller.php';
             <input type="submit" name="submit" value="Ajouter">
         </form>
 
+        <div class="listAdd">
+            <a class="cancel" href="liste-patients.php">Annuler</a>
+        </div>
+
     <?php } ?>
 
-    <div class="listAdd">
-        <a href="liste-patients.php">Liste des patients</a>
-        <a href="home.php">Retour accueil</a>
-    </div>
 
 
 

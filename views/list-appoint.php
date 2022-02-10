@@ -1,3 +1,7 @@
+<?php
+require_once '../controllers/list-appoint_controller.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -21,28 +25,28 @@
         <table>
             <thead>
                 <tr>
-                    <th>Nom</th>
-                    <th>Prénom</th>
-                    <th>Date de rendez-vous</th>
+                    <th>Nom - Prénom</th>
+                    <th>Date du RDV</th>
+                    <th>Heure du RDV</th>
                     <th></th>
                     <th></th>
                 </tr>
             </thead>
 
             <tbody>
-            
+            <?php foreach($arrayAppoint as $appoint){ ?>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><?= $appoint['name'] ?></td>
+                        <td><?= $appoint['date'] ?></td>
+                        <td><?= $appoint['hour'] ?></td>
                         <td class="buttonInfos">
-                            <form action="" method="POST">
-                                <button class="infos" name="" value="" type="submit"><i class="fas fa-info"></i> Infos</button>
+                            <form action="infos-appoint.php" method="POST">
+                                <button class="infos" name="infos" value=<?= $appoint['id'] ?> type="submit"><i class="fas fa-info"></i> Infos</button>
                             </form>
                         </td>
                         <td><a class="linkDelete" href="list-appoint.php?delete=" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce rendez-vous ?')" ;><i class="fas fa-trash-alt"></i></a></td>
                     </tr>
-                
+                <?php } ?>
             </tbody>
         </table>
     </div>

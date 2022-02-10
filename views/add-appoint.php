@@ -21,17 +21,27 @@ require_once '../controllers/add-appoint-controller.php';
     <h1 class="titleList"><a href="home.php">CHU La Manu</a></h1>
     <h2>Nouveau rendez-vous</h2>
 
+    <?php if(!empty($_POST['add']) && empty($arrayError)){ ?>
+        <p class="patientAdded">Le RDV a été ajouté</p>
+        <div class="listAdd">
+            <a class="linkNav" href="list-appoint.php">Liste des RDV</a>
+        </div>
+    
+    <?php }else{
+    ?>
+
     <form action="" method="POST">
         <div>
             <label for="lastname">Nom: </label>
             <select name="lastname" id="lastname">
+                <option value="">Choix du patient</option>
                 <?php
                 foreach($arrayPatients as $patient){
                 ?>
-                <option value=<?= $patient['id'] ?>><?= $patient['lastname'] ?></option>
+                <option value=<?= $patient['id'] ?>><?= $patient['name'] ?></option>
                 <?php } ?>
             </select>
-            <span></span>
+            <span><?= $arrayError['lastname'] ?? '' ?></span>
         </div>
         <!-- <div>
             <label for="firstname">Prénom: </label>
@@ -45,14 +55,10 @@ require_once '../controllers/add-appoint-controller.php';
         </div>
         
         <div>
+            
             <label for="hour">Heure: </label>
-            <select name="hour" id="hour">
-                <?php
-                for($i=9; $i<=19; $i++){
-                ?>
-                <option value="<?= $i .':00:00' ?>"><?= $i .":00" ?></option>
-                <?php } ?>
-            </select>
+            <input type="time" name="hour" id="hour" min="09:00" max="19:00" step="900" value="<?= $_POST['hour'] ?? "" ?>">
+            <span><?= $arrayError['hour'] ?? '' ?></span>
         </div>
         <div>
             <label for="détails">Commentaires (facultatif): </label>
@@ -65,7 +71,7 @@ require_once '../controllers/add-appoint-controller.php';
     <div class="listAdd">
         <a class="cancel" href="list-appoint.php">Annuler</a>
     </div>
-
+<?php } ?>
 
 </body>
 
